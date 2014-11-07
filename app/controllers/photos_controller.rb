@@ -20,5 +20,6 @@ class PhotosController < ApplicationController
 
   def destroy
     @this_photo = Photo.find_by({:id => params["id"]})
+    @this_photo.destroy
   end
 end
