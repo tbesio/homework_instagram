@@ -27,12 +27,18 @@
       <% @list_of_photos.each do |photo| %>
         <div class="panel panel-default">
           <div class="panel-body">
-            <img src="<%= photo.source %>" width=100%>
+            <img src="<%= photo.source %>" width=100% style="border-radius:5px">
             <p><%= photo.caption %></p>
             <p>
-              <a href="http://localhost:3000/photo_details/<%= photo.id %>"><i class="fa fa-arrows-alt"></i></a>
-              <a href="http://localhost:3000/edit_photo_form/<%= photo.id %>"><i class="fa fa-pencil"></i></a>
-              <a href="http://localhost:3000/delete_photo/<%= photo.id %>"><i class="fa fa-trash"></i></a>
+              <button class="btn btn-primary">
+                <a href="http://localhost:3000/photo_details/<%= photo.id %>"><i class="fa fa-arrows-alt" style="color:white"></i></a>
+              </button>
+              <button class="btn btn-warning">
+                <a href="http://localhost:3000/edit_photo_form/<%= photo.id %>"><i class="fa fa-pencil" style="color:white"></i></a>
+              </button>
+              <button class="btn btn-danger">
+                <a href="http://localhost:3000/delete_photo/<%= photo.id %>"><i class="fa fa-trash" style="color:white"></i></a>
+              </button>
             </p>
           </div>
         </div>
