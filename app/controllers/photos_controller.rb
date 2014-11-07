@@ -12,9 +12,9 @@ class PhotosController < ApplicationController
   end
 
   def create_row
-    p = Photo.new
-    p.source =
-    p.caption = photo_hash[:caption]
-    p.save
+    new_photo = Photo.new
+    new_photo.source = params["the_source"]
+    new_photo.caption = photo_hash["the_caption"]
+    new_photo.save
   end
 end
