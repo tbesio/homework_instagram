@@ -1,6 +1,14 @@
-<h1>Photo Details Page</h1>
+<div class="container">
+  <div class="page-header">
+    <h1>Photo Details Page</h1>
+  </div>
 
-<img src="<%= @this_photo.source %>" width=80%>
-<p><%= @this_photo.caption %></p>
+  <div class="row">
+    <div class="col-md-12">
+      <img src="<%= @this_photo.source %>" width=80%>
+      <p><%= @this_photo.caption %></p>
 
-<a href="http://localhost:3000/">Return to Index</a>
+      <a href="http://localhost:3000/">Return to Index</a>
+    </div>
+  </div>
+</div>
