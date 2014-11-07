@@ -22,4 +22,17 @@ class PhotosController < ApplicationController
     @this_photo = Photo.find_by({:id => params["id"]})
     @this_photo.destroy
   end
+
+  def edit_form
+    @this_photo = Photo.find_by({:id => params["id"]})
+  end
+
+  def update_row
+    update_photo = Photo.find_by({:id => params["id"]})
+    update_photo.source = params["the_source"]
+    update_photo.caption = params["the_caption"]
+    update_photo.save
+
+    @updated_photo = Photo.find_by({:id => params["id"]})
+  end
 end
