@@ -14,7 +14,11 @@ class PhotosController < ApplicationController
   def create_row
     new_photo = Photo.new
     new_photo.source = params["the_source"]
-    new_photo.caption = photo_hash["the_caption"]
+    new_photo.caption = params["the_caption"]
     new_photo.save
+  end
+
+  def destroy
+    @this_photo = Photo.find_by({:id => params["id"]})
   end
 end
