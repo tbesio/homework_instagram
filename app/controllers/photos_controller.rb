@@ -35,4 +35,11 @@ class PhotosController < ApplicationController
 
     @updated_photo = Photo.find_by({:id => params["id"]})
   end
+
+  def random_photo
+    photo_count = Photo.count - 1
+    rand_id = rand(0..photo_count)
+
+    @rand_photo = Photo.all[rand_id]
+  end
 end
