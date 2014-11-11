@@ -12,10 +12,10 @@ class PhotosController < ApplicationController
   end
 
   def create_row
-    new_photo = Photo.new
-    new_photo.source = params["the_source"]
-    new_photo.caption = params["the_caption"]
-    new_photo.save
+    @new_photo = Photo.new
+    @new_photo.source = params["the_source"]
+    @new_photo.caption = params["the_caption"]
+    @new_photo.save
   end
 
   def destroy

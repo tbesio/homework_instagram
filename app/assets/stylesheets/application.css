@@ -17,3 +17,7 @@
 .no-hover:hover {
   text-decoration: none;
 }
+
+body {
+   background-image: url(/assets/photography_@2X.png);
+}
